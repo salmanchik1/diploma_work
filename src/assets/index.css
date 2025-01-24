@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "Intro-Bold";
+    src: url("../assets/fonts/intro-bold.eot"); /* IE 9 Compatibility Mode */
+    src: url("../assets/fonts/intro-bold.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE < 9 */ url("../assets/fonts/intro-bold.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/intro-bold.woff")
+            format("woff"),
+        /* Firefox >= 3.6, any other modern browser */
+            url("../assets/fonts/intro-bold.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/intro-bold.svg#intro-bold") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: "Intro-Book";
+    src: url("../assets/fonts/intro-book.eot"); /* IE 9 Compatibility Mode */
+    src: url("../assets/fonts/intro-book.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE < 9 */ url("../assets/fonts/intro-book.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/intro-book.woff")
+            format("woff"),
+        /* Firefox >= 3.6, any other modern browser */
+            url("../assets/fonts/intro-book.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/intro-book.svg#intro-book") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: "Intro-Regular";
+    src: url("../assets/fonts/intro-regular.eot"); /* IE 9 Compatibility Mode */
+    src: url("../assets/fonts/intro-regular.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE < 9 */ url("../assets/fonts/intro-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/intro-regular.woff")
+            format("woff"),
+        /* Firefox >= 3.6, any other modern browser */
+            url("../assets/fonts/intro-regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+            url("../assets/fonts/intro-regular.svg#intro-regular") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+    --color-bg: #484283;
+    --color-accent: #f14f4f;
+    --color-text: #444b58;
+    --color-text2: #ffffff;
+    --color-small-text: #dbbba9;
+    --color-sec-bg: #fff4ee;
+    --color-gray: #b2b5bb;
+    /* ------ */
+    --color-button-text: #ffffff;
+    --color-button: #f14f4f;
+    --color-button-h: #cc4949;
+    --color-button-a: #8c2828;
+    --color-button2-text: #ffffff;
+    --color-button2: #444b58;
+    --color-button2-h: #31343c;
+    --color-button2-a: #000000;
+    --color-button3-text: #444b58;
+    --color-button3: #ffffff;
+    --color-button3-h: #444b58;
+    --color-button3-a: #31343c;
+    --color-button4-text: #444b58;
+    --color-button4: #b2b5bb;
+    --color-button4-h: #f14f4f;
+    --color-button4-a: #b2b5bb80;
+    /* ------- */
+    --content-max-width: 1200px;
+}
+
+/* Set default font styles globally */
+body {
+    font-family: "Intro-Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text2);
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Intro-Regular", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+h2 {
+    font-family: "Intro-Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Intro-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.price {
+    font-family: "Intro-Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+button {
+    font-family: "Intro-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-button-text);
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 5px;
+    padding: 18px 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-button-h);
+}
+
+button:active {
+    background-color: var(--color-button-a);
+}
+
+.button2 {
+    color: var(--color-button2-text);
+    background-color: var(--color-button2);
+}
+
+.button2:hover {
+    background-color: var(--color-button2-h);
+}
+
+.button2:active {
+    background-color: var(--color-button2-a);
+}
+
+.button3 {
+    color: var(--color-button3-text);
+    background-color: var(--color-button3);
+    border: 2px solid var(--color-button3-h);
+    padding: 11px 40px;
+}
+
+.button3:hover {
+    color: var(--color-button-text);
+    background-color: var(--color-button3-h);
+    border-color: var(--color-button3-h);
+}
+
+.button3:active {
+    color: var(--color-button-text);
+    background-color: var(--color-button3-a);
+    border-color: var(--color-button3-a);
+}
+
+.button4.unselected {
+    color: var(--color-button4-text);
+    background-color: var(--color-button-text);
+    border: 2px solid var(--color-button4);
+    padding: 11px 40px;
+}
+
+.button4.selected {
+    color: var(--color-button4-text);
+    background-color: var(--color-button-text);
+    border: 2px solid var(--color-button4-h);
+}
+
+.button4.absent {
+    color: var(--color-button4);
+    background-color: var(--color-button-text);
+    border: 2px solid var(--color-button4);
+}
+
+label input[type="checkbox"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Checkbox un-checked style */
+input[type="checkbox"]+span:before {
+  content: '';
+  border: 1px solid var(--color-small-text);
+  border-radius: 3px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  vertical-align: -2px;
+}
+
+input[type="checkbox"]:checked+span:before {
+  background-image: url("./assets/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:focus+span:before,
+input[type="checkbox"]:not(:disabled)+span:hover:before {
+  outline-color: transparent; /*switch to transparent*/
+  outline-width: 2px;
+  outline-style: dotted;
+  }
+
+input[type="checkbox"]:disabled+span {
+  cursor: default;
+  color: black;
+  opacity: 0.5;
+}
+
+input[type="text"] {
+    font-family: "Intro-Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
+    border-radius: 5px;
+    padding: 18px 20px;
+}
+
+.menu {
+    font-family: "Intro-Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}

@@ -1,5 +1,9 @@
+import React from "react";
+import styled from "styled-components";
+
 const LogoWrapper = styled.div`
-    font-family: "Intro-Bold", sans-serif;
+    font-family: "Intro", sans-serif;
+    font-weight: bold;
     font-size: 30px;
 
     & a {

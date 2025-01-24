@@ -8,6 +8,7 @@ const HeaderWrapper = styled.header`
     align-items: center;
     background-color: var(--color-bg);
     color: var(--color-text2);
+    padding: 0 20px;
 `;
 
 const Header: React.FC = () => {

@@ -9,6 +9,7 @@ const FooterWrapper = styled.footer`
     margin: 0 auto;
     background-color: var(--color-text);
     color: var(--color-text2);
+    padding: 0 20px;
 `;
 
 const Footer: React.FC = () => {

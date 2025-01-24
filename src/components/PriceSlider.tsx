@@ -3,7 +3,7 @@ import styled from "styled-components";
 import noUiSlider, { API } from "nouislider";
 import "nouislider/dist/nouislider.css";
 
-interface SliderProps {
+interface PriceSliderProps {
     start: number[]; // Initial values for the slider
     range: { min: number; max: number }; // Range for the slider
     step?: number; // Optional step size
@@ -14,7 +14,6 @@ interface SliderProps {
 // Styled slider container
 const SliderContainer = styled.div`
     background-color: none; /* Soft background */
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +42,8 @@ const SliderWrapper = styled.div`
         border-radius: 3px;
         border: none;
         top: -8px;
-        right: -4px;
+        right: -3px;
+        box-shadow: none;
     }
 
     .noUi-handle::after,
@@ -63,12 +63,11 @@ const ValueDisplay = styled.div`
     border-bottom: none;
     height: 50px;
 
-
     span {
         color: var(--color-text);
         font-size: 16px;
         font-weight: 500;
-        width: 50%;
+        width: 60px;
         text-align: center;
         margin: 0 30px;
     }
@@ -80,7 +79,7 @@ const ValueDisplay = styled.div`
     }
 `;
 
-const Slider: React.FC<SliderProps> = ({
+const PriceSlider: React.FC<PriceSliderProps> = ({
     start,
     range,
     step = 1,
@@ -134,4 +133,4 @@ const Slider: React.FC<SliderProps> = ({
     );
 };
 
-export default Slider;
+export default PriceSlider;

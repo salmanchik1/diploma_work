@@ -1,22 +1,20 @@
 @font-face {
-    font-family: "Intro-Bold";
-    src: url("../assets/fonts/intro-bold.eot"); /* IE 9 Compatibility Mode */
-    src: url("../assets/fonts/intro-bold.eot?#iefix")
-            format("embedded-opentype"),
-        /* IE < 9 */ url("../assets/fonts/intro-bold.woff2") format("woff2"),
-        /* Super Modern Browsers */ url("../assets/fonts/intro-bold.woff")
+    font-family: "Intro";
+    src: url("../assets/fonts/intro-regular.eot"); /* IE 9 Compatibility Mode */
+    src: url("../assets/fonts/intro-regular.eot?#iefix") format("embedded-opentype"),
+        /* IE < 9 */ url("../assets/fonts/intro-regular.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../assets/fonts/intro-regular.woff")
             format("woff"),
         /* Firefox >= 3.6, any other modern browser */
-            url("../assets/fonts/intro-bold.ttf") format("truetype"),
+            url("../assets/fonts/intro-regular.ttf") format("truetype"),
         /* Safari, Android, iOS */
-            url("../assets/fonts/intro-bold.svg#intro-bold") format("svg"); /* Chrome < 4, Legacy iOS */
+            url("../assets/fonts/intro-regular.svg#intro") format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
 @font-face {
     font-family: "Intro-Book";
     src: url("../assets/fonts/intro-book.eot"); /* IE 9 Compatibility Mode */
-    src: url("../assets/fonts/intro-book.eot?#iefix")
-            format("embedded-opentype"),
+    src: url("../assets/fonts/intro-book.eot?#iefix") format("embedded-opentype"),
         /* IE < 9 */ url("../assets/fonts/intro-book.woff2") format("woff2"),
         /* Super Modern Browsers */ url("../assets/fonts/intro-book.woff")
             format("woff"),
@@ -24,20 +22,6 @@
             url("../assets/fonts/intro-book.ttf") format("truetype"),
         /* Safari, Android, iOS */
             url("../assets/fonts/intro-book.svg#intro-book") format("svg"); /* Chrome < 4, Legacy iOS */
-}
-
-@font-face {
-    font-family: "Intro-Regular";
-    src: url("../assets/fonts/intro-regular.eot"); /* IE 9 Compatibility Mode */
-    src: url("../assets/fonts/intro-regular.eot?#iefix")
-            format("embedded-opentype"),
-        /* IE < 9 */ url("../assets/fonts/intro-regular.woff2") format("woff2"),
-        /* Super Modern Browsers */ url("../assets/fonts/intro-regular.woff")
-            format("woff"),
-        /* Firefox >= 3.6, any other modern browser */
-            url("../assets/fonts/intro-regular.ttf") format("truetype"),
-        /* Safari, Android, iOS */
-            url("../assets/fonts/intro-regular.svg#intro-regular") format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
 :root {
@@ -71,9 +55,9 @@
 
 /* Set default font styles globally */
 body {
-    font-family: "Intro-Book", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
     color: var(--color-text2);
     background-color: var(--color-bg);
     margin: 0;
@@ -81,34 +65,34 @@ body {
 }
 
 h1 {
-    font-family: "Intro-Regular", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: normal;
     color: var(--color-text);
 }
 
 h2 {
-    font-family: "Intro-Bold", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 h3 {
-    font-family: "Intro-Regular", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .price {
-    font-family: "Intro-Regular", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 button {
-    font-family: "Intro-Regular", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
     color: var(--color-button-text);
     background-color: var(--color-button);
     border: none;
@@ -176,63 +160,17 @@ button:active {
     border: 2px solid var(--color-button4);
 }
 
-label input[type="checkbox"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-
-/* Checkbox un-checked style */
-input[type="checkbox"]+span:before {
-  content: '';
-  border: 1px solid var(--color-small-text);
-  border-radius: 3px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 0.5em;
-  margin-top: 0.5em;
-  vertical-align: -2px;
-}
-
-input[type="checkbox"]:checked+span:before {
-  background-image: url("./assets/checkmark.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px;
-  border-radius: 2px;
-}
-
-input[type="checkbox"]:focus+span:before,
-input[type="checkbox"]:not(:disabled)+span:hover:before {
-  outline-color: transparent; /*switch to transparent*/
-  outline-width: 2px;
-  outline-style: dotted;
-  }
-
-input[type="checkbox"]:disabled+span {
-  cursor: default;
-  color: black;
-  opacity: 0.5;
-}
-
 input[type="text"] {
-    font-family: "Intro-Book", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: normal;
     color: var(--color-text);
     border-radius: 5px;
     padding: 18px 20px;
 }
 
 .menu {
-    font-family: "Intro-Book", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: normal;
 }

@@ -1,9 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter } from "react-router";
 import Header from "./components/Header";
-import MainPage from "./pages/MainPage";
 import Footer from "./components/Footer";
 import styled from "styled-components";
-import CatalogPage from "./pages/CatalogPage";
+import AppRouter from "./router/AppRouter";
 
 const MainWrapper = styled.main`
     display: flex;
@@ -14,16 +13,13 @@ const MainWrapper = styled.main`
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <Header />
             <MainWrapper>
-                <Routes >
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/catalog" element={<CatalogPage />} />
-                </Routes>
+                <AppRouter />
             </MainWrapper>
             <Footer />
-        </Router>
+        </BrowserRouter>
     );
 }
 

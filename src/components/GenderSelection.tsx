@@ -1,8 +1,4 @@
-import React, { useState } from "react";
 import styled from "styled-components";
-
-// Type for the gender
-type Gender = "male" | "female" | null;
 
 const GenderSelectionContainer = styled.div`
     display: flex;
@@ -15,7 +11,6 @@ const CheckboxWrapper = styled.div`
     align-items: center;
     margin-bottom: 5px;
 `;
-
 const StyledCheckbox = styled.input`
     appearance: none;
     width: 20px;
@@ -52,28 +47,24 @@ const StyledCheckbox = styled.input`
         border-color: var(--color-small-text);
     }
 `;
-
 const Label = styled.label`
     font-size: 16px;
     cursor: pointer;
 `;
 
 interface GenderSelectionProps {
-    selectedGender: Gender;
-    onGenderChange: (gender: Gender) => void;
+    man: boolean;
+    setMan: React.Dispatch<React.SetStateAction<boolean>>;
+    woman: boolean;
+    setWoman: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const GenderSelection: React.FC<GenderSelectionProps> = ({
-    selectedGender,
-    onGenderChange,
+    man = false,
+    setMan = () => {},
+    woman = false,
+    setWoman = () => {},
 }) => {
-    const handleCheckboxChange = (
-        event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-        const value = event.target.value as Gender;
-        onGenderChange(value);
-    };
-
     return (
         <GenderSelectionContainer>
             <CheckboxWrapper>
@@ -81,8 +72,8 @@ const GenderSelection: React.FC<GenderSelectionProps> = ({
                     type="checkbox"
                     id="male"
                     value="male"
-                    checked={selectedGender === "male"}
-                    onChange={handleCheckboxChange}
+                    checked={man}
+                    onChange={() => setMan(!man)}
                 />
                 <Label htmlFor="male">Мужской</Label>
             </CheckboxWrapper>
@@ -91,8 +82,8 @@ const GenderSelection: React.FC<GenderSelectionProps> = ({
                     type="checkbox"
                     id="female"
                     value="female"
-                    checked={selectedGender === "female"}
-                    onChange={handleCheckboxChange}
+                    checked={woman}
+                    onChange={() => setWoman(!woman)}
                 />
                 <Label htmlFor="female">Женский</Label>
             </CheckboxWrapper>

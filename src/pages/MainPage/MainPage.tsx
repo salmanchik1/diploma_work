@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../components/Container";
-import Wrapper from "../components/Wrapper";
+import Container from "../../components/Container";
+import Wrapper from "../../components/Wrapper";
 
 const BgLabel = styled.h1`
     color: var(--color-text2);

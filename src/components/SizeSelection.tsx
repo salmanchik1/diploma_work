@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-// Type for available shoe sizes
-type ShoeSize = string | number;
+// Define the size type
+type Size = number;
+
+// Define the props for the SizeSelection component
+interface SizeSelectionProps {
+    sizes: Size[];
+    selectedSizes: Size[];
+    onSizeClick: (size: Size) => void;
+}
 
 const SizesGridContainer = styled.div`
     display: flex;
@@ -28,25 +35,19 @@ const SizeButton = styled.button<{ isSelected: boolean }>`
     }
 `;
 
-interface SizeSelectionProps {
-    sizes: ShoeSize[];
-}
-
-const SizeSelection: React.FC<SizeSelectionProps> = ({ sizes }) => {
-    const [selectedSize, setSelectedSize] = useState<ShoeSize | null>(null);
-
-    const handleSizeClick = (size: ShoeSize) => {
-        setSelectedSize(size);
-        console.log("Selected shoe size:", size);
-    };
-
+// Define the SizeSelection component
+const SizeSelection: React.FC<SizeSelectionProps> = ({
+    sizes,
+    selectedSizes,
+    onSizeClick,
+}) => {
     return (
         <SizesGridContainer>
-            {sizes.map((size) => (
+            {sizes.map((size, index) => (
                 <SizeButton
-                    key={String(size)}
-                    isSelected={selectedSize === size}
-                    onClick={() => handleSizeClick(size)}
+                    key={String(size) + index}
+                    isSelected={selectedSizes.includes(size)}
+                    onClick={() => onSizeClick(size)}
                 >
                     {size}
                 </SizeButton>

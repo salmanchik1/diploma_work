@@ -127,7 +127,6 @@ const PriceSlider: React.FC<PriceSliderProps> = ({
                 <span>{values[1]}</span>
             </ValueDisplay>
 
-            {/* Slider */}
             <SliderWrapper ref={sliderRef} />
         </SliderContainer>
     );

@@ -6,6 +6,7 @@ import Container from "../../components/Container";
 import GenderSelection from "../../components/GenderSelection";
 import SizeSelection from "../../components/SizeSelection";
 import axios from "axios";
+import ProductCard from "../../components/ProductCard";
 
 const CatalogWrapper = styled.div`
     display: flex;
@@ -33,6 +34,12 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+`;
+
+const ProductsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 `;
 
 interface Sneaker {
@@ -222,12 +229,12 @@ const CatalogPage: React.FC = () => {
                     </Sidebar>
                     <Content>
                         <h2>Кроссовки</h2>
+                        <ProductsWrapper>
                         {sneakers &&
                             sneakers.map((item) => (
-                                <div key={item.id}>
-                                    {item.id} | {item.price} | {item.title} | {item.sizes.join(", ")}
-                                </div>
+                                <ProductCard product={item} key={item.id} />
                             ))}
+                        </ProductsWrapper>
                     </Content>
                 </CatalogWrapper>
             </Container>
